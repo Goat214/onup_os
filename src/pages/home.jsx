@@ -496,7 +496,7 @@ export default function Home() {
               Биздин команда
             </a>
             <a href="#consult1" className="nb-cta">
-              Бекер консультация
+              КОНСУЛЬТАЦИЯ
             </a>
           </div>
         </div>
@@ -513,7 +513,7 @@ export default function Home() {
               <h1>{s.title}</h1>
               <p>{s.desc}</p>
               <a href="#consult1" className="btn-hero">
-                Бекер консультация алуу →
+                консультация алуу →
               </a>
             </div>
           ))}
