@@ -470,7 +470,7 @@ export default function Home() {
         <div className="wrap">
           <Link to="/" className="nb-logo">
             <img src={logo} alt="Onup OS" />
-            <span className="nb-logo-text">Onup OS</span>
+            <span className="nb-logo-text">ONUP OS</span>
           </Link>
           <ul className="nb-links">
             <li>
@@ -488,7 +488,7 @@ export default function Home() {
           </ul>
           <div className="nb-right">
             <a
-              href="https://t.me/onupos"
+              href="https://t.me/+WEiuzpYRk4BlNzli"
               className="nb-team"
               target="_blank"
               rel="noreferrer"
