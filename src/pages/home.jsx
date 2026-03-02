@@ -2,7 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../css/home.css";
 import Navbar from "../components/navbar"; 
+import CoursesSection from "../components/CoursesSection";
+import BlogSection from "../components/BlogSection";
 import "../css/navbar.css";
+import "../css/courses.css";
+import "../css/blogSection.css";
+
 import {
   FaCrown,
   FaBookOpen,
@@ -56,11 +61,7 @@ const tagMap = {
 };
 
 // ========== BLOG DATA ==========
-const blogs = [
-  { img: null, emoji: "🎬", cat: "Маркетинг",    views: 49,  date: "22-февраль, 2026", title: "Медиа тармагында карьера: Видеография менен кинематографиянын айырмасы эмне?", desc: "Видеография жана кинематография эмне? Алардын айырмасы, милдеттери жана медиа дүйнөсүндө профессионал болуу жолу жөнүндө кеңири маалымат." },
-  { img: null, emoji: "💻", cat: "Программалоо", views: 116, date: "21-февраль, 2026", title: "Pass-the-Hash чабуулу эмне? Windows тармактарын коргоо колдонмосу",          desc: "Бул макалада Pass-the-Hash чабуулу эмне экендиги, ал кантип иштеши жана андан кантип коргонуу мүмкүн экендиги жөнүндө толук маалымат берилет." },
-  { img: null, emoji: "🚀", cat: "Жаңылыктар",  views: 68,  date: "16-февраль, 2026", title: "Start-up Garage негиздөөчүсү менен атайын мастер-класс",                       desc: "Бул постто иш-чарадан үзүндүлөрдү көрө аласыз." },
-];
+
 
 // ========== VIDEO REVIEWS ==========
 const videoReviews = [
@@ -231,58 +232,10 @@ export default function Home() {
       </section>
 
       {/* ===== COURSES ===== */}
-      <section className="courses-sec reveal">
-        <div className="wrap">
-          <h2 className="sec-title">Курстар</h2>
-          <div className="courses-filter">
-            {filters.map((f) => (
-              <button key={f} className={`cf-btn ${filter === f ? "active" : ""}`} onClick={() => setFilter(f)}>{f}</button>
-            ))}
-          </div>
-          <div className="courses-grid">
-            {filteredCourses.map((c, i) => (
-              <Link to="/courses" className="course-card" key={i}>
-                <div className="course-thumb">
-                  <div className="course-icon">{c.icon}</div>
-                  <div className="course-tags">
-                    <span className={`tag ${tagMap[c.category]}`}>{c.category}</span>
-                    <span className={`tag ${tagMap[c.type]}`}>{c.type}</span>
-                  </div>
-                </div>
-                <div className="course-body">
-                  <div className="course-name">{c.name}</div>
-                  <div className="course-dur">{c.duration}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CoursesSection />
 
       {/* ===== BLOG ===== */}
-      <section className="blog-sec reveal">
-        <div className="wrap">
-          <h2 className="sec-title">Блог</h2>
-          <div className="blog-grid">
-            {blogs.map((b, i) => (
-              <a href="#" className="blog-card" key={i}>
-                <div className="blog-img">
-                  {b.img ? <img src={b.img} alt={b.title} /> : <span>{b.emoji}</span>}
-                </div>
-                <div className="blog-body">
-                  <div className="blog-cat-row">
-                    <span className="blog-cat">{b.cat}</span>
-                    <span className="blog-views">👁 {b.views}</span>
-                  </div>
-                  <div className="blog-title">{b.title}</div>
-                  <p className="blog-desc">{b.desc}</p>
-                  <div className="blog-date">{b.date}</div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+     <BlogSection/>
 
       {/* ===== ABOUT ===== */}
       <section className="about-sec reveal" id="about">
@@ -333,8 +286,8 @@ export default function Home() {
             </div>
             <div className="stat-card">
               <div className="stat-num">80% - 85%</div>
-              <div className="stat-lbl">ЖОЖдорго кабыл алынган</div>
-              <div className="stat-img-wrap"><img src={briefcaseImg} alt="briefcase" className="stat-img" /></div>
+              <div className="stat-lbl two">ЖОЖдорго кабыл алынган</div>
+              <div className="stat-img-wrap "><img  src={briefcaseImg} alt="briefcase" className="stat-img " /></div>
             </div>
           </div>
         </div>
