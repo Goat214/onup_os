@@ -4,7 +4,7 @@ import "../css/home.css";
 import Navbar from "../components/navbar";
 import CoursesSection from "../components/CoursesSection";
 import BlogSection from "../components/BlogSection";
-import Cunsult from "../components/Cunsult";
+import Cunsult, { ConsultWithPhoto, ConsultDark } from "../components/Cunsult";
 import "../css/navbar.css";
 import "../css/courses.css";
 import "../css/blogSection.css";
@@ -263,30 +263,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ✅ FIX: onSubmit — arrow function менен event берилет */}
-      <section className="consult-photo-sec reveal">
-        <div className="wrap">
-          <div className="consult-photo-inner">
-            <div className="consult-photo-img"><div className="img-ph">🏫</div></div>
-            <div className="consult-box">
-              <h2>Бекер консультация</h2>
-              <p>Телефон номериңизди жазып калтырыңыз, биз сизге чалабыз жана бир да сурооңуз жооп алынбай калбасына аракет кылабыз</p>
-              <form className="c-form" onSubmit={(e) => submitConsult(e, name2, phone2, agree2, () => { setName2(""); setPhone2(""); setAgree2(false); })}>
-                <input className="c-form-name" type="text" placeholder="Атыңыз" value={name2} onChange={(e) => setName2(e.target.value)} />
-                <div className="c-phone-row">
-                  <span className="c-phone-prefix">+996</span>
-                  <input className="c-phone-input" type="tel" placeholder="700 000 000" value={phone2} onChange={(e) => setPhone2(e.target.value)} />
-                </div>
-                <label className="c-agree">
-                  <input type="checkbox" checked={agree2} onChange={(e) => setAgree2(e.target.checked)} />
-                  Жеке маалыматтарды <a href="#oferta">иштетүүгө</a> макулмун
-                </label>
-                <button type="submit" className="btn-green">Суроо жөнөтүү</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+     <ConsultWithPhoto/>
 
       <section className="dir-sec reveal" id="directions">
         <div className="wrap">
@@ -311,27 +289,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ✅ FIX: onSubmit — arrow function менен event берилет */}
-      <section className="consult-sec dark reveal" id="consult2">
-        <div className="wrap">
-          <div className="consult-box">
-            <h2>Бекер консультация</h2>
-            <p>Телефон номериңизди жазып калтырыңыз, биз сизге чалабыз жана бир да сурооңуз жооп алынбай калбасына аракет кылабыз</p>
-            <form className="c-form" onSubmit={(e) => submitConsult(e, name3, phone3, agree3, () => { setName3(""); setPhone3(""); setAgree3(false); })}>
-              <input className="c-form-name" type="text" placeholder="Атыңыз" value={name3} onChange={(e) => setName3(e.target.value)} />
-              <div className="c-phone-row">
-                <span className="c-phone-prefix">+996</span>
-                <input className="c-phone-input" type="tel" placeholder="700 000 000" value={phone3} onChange={(e) => setPhone3(e.target.value)} />
-              </div>
-              <label className="c-agree">
-                <input type="checkbox" checked={agree3} onChange={(e) => setAgree3(e.target.checked)} />
-                Жеке маалыматтарды <a href="#oferta">иштетүүгө</a> макулмун
-              </label>
-              <button type="submit" className="btn-green">Суроо жөнөтүү</button>
-            </form>
-          </div>
-        </div>
-      </section>
+     <ConsultDark/>
 
       <section className="enroll-sec reveal">
         <div className="wrap">
@@ -381,6 +339,7 @@ export default function Home() {
           <div className="loc-grid">
             <div className="loc-left">
               <div className="loc-photo" />
+              
               <div className="loc-rows">
                 <div className="loc-row">
                   <span className="loc-row-icon">📍</span>
