@@ -29,7 +29,7 @@ import jetiTepkich from "../images/jeti_tepkich.png";
 import language from "../images/language.png";
 import masterklass from "../images/msterklass.jpg";
 import trophy from "../images/trophy.jpg";
-import oip from "../images/oip.webp";
+import oip from "../images/OIP.webp";
 import sayaqat from "../images/sayaqat.jpg";
 import sertifikat from "../images/serti.jpg";
 
