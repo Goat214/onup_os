@@ -4,6 +4,7 @@ import "../css/home.css";
 import Navbar from "../components/navbar"; 
 import CoursesSection from "../components/CoursesSection";
 import BlogSection from "../components/BlogSection";
+import Cunsult from "../components/Cunsult";
 import "../css/navbar.css";
 import "../css/courses.css";
 import "../css/blogSection.css";
@@ -210,26 +211,7 @@ export default function Home() {
       </section>
 
       {/* ===== CONSULT 1 ===== */}
-      <section className="consult-sec light" id="consult1">
-        <div className="wrap">
-          <div className="consult-box">
-            <h2>Бекер консультация</h2>
-            <p>Телефон номериңизди жазып калтырыңыз, биз сизге чалабыз жана бир да сурооңуз жооп алынбай калбасына аракет кылабыз</p>
-            <form className="c-form" onSubmit={submitConsult(name1, phone1, agree1, () => { setName1(""); setPhone1(""); setAgree1(false); })}>
-              <input className="c-form-name" type="text" placeholder="Атыңыз" value={name1} onChange={(e) => setName1(e.target.value)} />
-              <div className="c-phone-row">
-                <span className="c-phone-prefix">+996</span>
-                <input className="c-phone-input" type="tel" placeholder="700 000 000" value={phone1} onChange={(e) => setPhone1(e.target.value)} />
-              </div>
-              <label className="c-agree">
-                <input type="checkbox" checked={agree1} onChange={(e) => setAgree1(e.target.checked)} />
-                Жеке маалыматтарды <a href="#oferta">иштетүүгө</a> макулмун
-              </label>
-              <button type="submit" className="btn-green">Суроо жөнөтүү</button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <Cunsult/>
 
       {/* ===== COURSES ===== */}
       <CoursesSection />
@@ -486,29 +468,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ===== AWARDS ===== */}
-      <section className="awards-sec reveal">
-        <div className="wrap">
-          <h2 className="sec-title">Брендтин жетишкендиктери</h2>
-        </div>
-        <div className="awards-track-wrap">
-          <div className="awards-track">
-            {doubleAwards.map((a, i) => (
-              <div className="award-card" key={i}>
-                <div className="award-img">
-                  {a.img ? <img src={a.img} alt={a.title} /> : <span>{a.emoji}</span>}
-                </div>
-                <div className="award-body">
-                  <div className="award-year">{a.year}</div>
-                  <div className="award-title">{a.title}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ===== ENROLL FORM ===== */}
       <section className="enroll-sec reveal">
         <div className="wrap">
@@ -559,7 +518,7 @@ export default function Home() {
           </div>
           <div className="loc-grid">
             <div className="loc-left">
-              <div className="loc-photo">🏢</div>
+              <div className="loc-photo"><img src="" alt="" /></div>
               <div className="loc-rows">
                 <div className="loc-row">
                   <span className="loc-row-icon">📍</span>
@@ -617,10 +576,9 @@ export default function Home() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span className="footer-copy">© «Onup OS», 2025 — Бардык укуктар корголгон.</span>
+            <span className="footer-copy">© «Onup OS», 2026 — Бардык укуктар корголгон.</span>
             <div className="footer-docs">
               <a href="#">📄 Тастыктама</a>
-              <a href="#">🏛 IT Park резиденти</a>
             </div>
           </div>
         </div>

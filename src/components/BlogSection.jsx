@@ -4,7 +4,7 @@ import { supabase } from "../supabaseClient";
 export default function BlogSection() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [modal, setModal] = useState(null); // { type: "video"|"img", src, title }
+  const [modal, setModal] = useState(null); 
 
   useEffect(() => {
     async function fetchBlogs() {
