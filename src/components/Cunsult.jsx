@@ -47,7 +47,7 @@ export default function ConsultForm() {
     <section className="consult-sec light" id="consult1">
       <div className="wrap">
         <div className="consult-box">
-          <h2>Бекер консультация</h2>
+         <h2>Kонсультация</h2>
           <p>
             Телефон номериңизди жазып калтырыңыз, биз сизге чалабыз жана бир да сурооңуз жооп алынбай калбасына аракет кылабыз
           </p>
