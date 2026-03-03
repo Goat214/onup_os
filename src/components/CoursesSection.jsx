@@ -11,7 +11,7 @@ const allCourses = [
     icon: lider,
     name: "Лидерлик Оффлайн, Онлайн",
     duration: "40 күн • 1.5 саат",
-    category: "Өнүгүү",
+    category: "Лидердик",
     type: "Оффлайн",
   },
  
@@ -19,7 +19,7 @@ const allCourses = [
     icon: tezOkuu,
     name: "Тез окуу Оффлайн, Онлайн",
     duration: "1 ай • 12 күн • 1.5 саат",
-    category: "Өнүгүү",
+    category: "Тез окуу",
     type: "Оффлайн",
   },
   {
@@ -32,14 +32,14 @@ const allCourses = [
   {
     icon: language,
     name: "Англис тили",
-    duration: "1 ай • 6 күн • 2 саат",
+    duration: "1 ай • 8 күн • 2 саат",
     category: "Тилдер",
     type: "Стандарт",
   },
   {
     icon: rus,
     name: "Орус тили",
-    duration: "1 ай • 6 күн • 2 саат",
+    duration: "1 ай • 8 күн • 2 саат",
     category: "Тилдер",
     type: "Стандарт",
   },
@@ -48,7 +48,7 @@ const allCourses = [
     name: "IT көндүмдөрү (Оффлайн)",
     duration: "1 ай • 12 күн • 2 саат",
     category: "IT",
-    type: "Оффлайн",
+    type: "Оффлайн" ,
   },
 ];
 
@@ -61,7 +61,7 @@ const tagMap = {
   Стандарт: "tag-std",
 };
 
-const filters = ["Баары", "Өнүгүү", "Тилдер", "IT"];
+const filters = ["Баары", "Лидер","Тез окуу", "Тилдер", "IT"];
 
 export default function CoursesSection() {
   const [filter, setFilter] = useState("Баары");

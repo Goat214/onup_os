@@ -65,11 +65,14 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
+ 
 }
 .hero-slide {
+  height: 400px;
   display: none;
   padding: 64px 0;
   animation: sIn 0.5s ease;
+ 
 }
 .hero-slide.active {
   display: block;
