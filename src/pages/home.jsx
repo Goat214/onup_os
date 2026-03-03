@@ -27,7 +27,7 @@ import lider from "../images/lider.png";
 import tezOkuu from "../images/tez_okuu.png";
 import jetiTepkich from "../images/jeti_tepkich.png";
 import language from "../images/language.png";
-import masterklass from "../images/msterklass.jpg";
+import masterklass from "../images/masterkalss.jpg";
 import trophy from "../images/trophy.jpg";
 import oip from "../images/OIP.webp";
 import sayaqat from "../images/sayaqat.jpg";
@@ -49,7 +49,7 @@ const photos = [
 ];
 
 const bonuses = [
-  { emoji: "💰", title: "100 000 сомго чейинки акчалай сыйлык", desc: "Англис тили курсу IELTS үчүн 10 000 сомго чейин каржылоо" },
+  { emoji: "💰", title: "10 000 сомго чейинки акчалай сыйлык", desc: "Англис тили курсу IELTS үчүн 10 000 сомго чейин каржылоо" },
   { emoji: "📚", title: "Онлайн курсту бекер алыңыз", desc: "Окуу борбордо билим алууну көздөгөн жана курс үчүн алдын ала толук төлөм төлөгөндөр үчүн ӨНҮП ӨС онлайн платформасынан 10 000 сомго чейинки курстар бекер берилет." },
   { emoji: "🎓", title: "Чет өлкөгө саякаттоого мүмкүнчүлүк", desc: "Мелдештер учурунда жылына жок дегенде бир жолу чет өлкөгө акысыз саякаттоо мүмкүнчүлүгүн беребиз." },
   { emoji: "✈️", title: "Лидер VIP групасын бүтүргөндөргө Умра сертификаты", desc: "Лидер VIP групаны ийгиликтүү бүтүргөндөргө Саудияга умрага сертификат." },
