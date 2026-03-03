@@ -27,6 +27,11 @@ import lider from "../images/lider.png";
 import tezOkuu from "../images/tez_okuu.png";
 import jetiTepkich from "../images/jeti_tepkich.png";
 import language from "../images/language.png";
+import masterklass from "../images/msterklass.jpg";
+import trophy from "../images/trophy.jpg";
+import oip from "../images/oip.webp";
+import sayaqat from "../images/sayaqat.jpg";
+import serti from "../images/serti.jpg";
 
 const slides = [
   { title: "ӨНҮП ӨС – мастер-класстар жана сынактар!", desc: "«ӨНҮП ӨС» окуу борборунда ай сайын өтүүчү мастер-класстарга жана сынактарга катышуу менен практикалык жана маанилүү көндүмдөргө ээ болуп өнүп өсүңүз!" },
@@ -72,12 +77,11 @@ const courseOptions = [
 
 const whyCards = [
   { icon: book, isImg: true, title: "Бекер коворкинг", desc: "24/7 форматында иштеген бекер коворкинг жана wifi." },
-  { icon: "🎓", isImg: false, title: "Сапаттуу билим", desc: "Дайыма жаңыланып турган курстар жана чоң тажрыйбага ээ устаттар." },
-  { icon: "🏆", isImg: false, title: "Үзгүлтүксүз мелдештер", desc: "Китеп сынактар, мелдештер." },
-  { icon: "🎙️", isImg: false, title: "Бекер мастер-класстар", desc: "Тармак адистери менен дайыма өткөрүлүүчү бекер мастер-класстар." },
-  { icon: "💼", isImg: false, title: "Жумуш сунуштоо кепилдиги *", desc: "«Onup OS» интенсив курстарды ийгиликтүү бүтүргөн окуучуларга жумуш сунуштоо кепилдигин берет. *" },
-  { icon: "📜", isImg: false, title: "Сертификат", desc: "Курсту ийгиликтүү аяктаган окуучулар «ӨНҮП ӨС» дипломун жана сертификатын алат." },
-  { icon: "🗺️", isImg: false, title: "Саякатто", desc: "Курсту ийгиликтүү аяктаган окуучулар музейлерге, библотекаларга тарыхый жана эс алуу жайларына 'ӨНҮП ӨС' окуу борборунун генеральдык директорун буйругу менен саякаттоо мүмкүнчүлүгүнө ээ болушат." },
+  { icon: oip, isImg: true, title: "Сапаттуу билим", desc: "Дайыма жаңыланып турган курстар жана чоң тажрыйбага ээ устаттар." },
+  { icon: trophy, isImg: true, title: "Үзгүлтүксүз мелдештер", desc: "Китеп сынактар, мелдештер." },
+  { icon: masterklass, isImg: true, title: "Бекер мастер-класстар", desc: "Тармак адистери менен дайыма өткөрүлүүчү бекер мастер-класстар." },
+  { icon: serti, isImg: true, title: "Сертификат", desc: "Курсту ийгиликтүү аяктаган окуучулар «ӨНҮП ӨС» дипломун жана сертификатын алат." },
+  { icon: sayaqat, isImg: true, title: "Саякатто", desc: "Курсту ийгиликтүү аяктаган окуучулар музейлерге, библотекаларга тарыхый жана эс алуу жайларына 'ӨНҮП ӨС' окуу борборунун генеральдык директорун буйругу менен саякаттоо мүмкүнчүлүгүнө ээ болушат." },
 ];
 
 export default function Home() {
@@ -216,7 +220,7 @@ export default function Home() {
               <div className="why-card" key={i}>
                 <div className="why-icon">
                   {r.isImg
-                    ? <img src={r.icon} alt={r.title} style={{ width: "400px", height: "100px", objectFit: "cover" }} />
+                    ? <img src={r.icon} alt={r.title} style={{ width: "100%", height: "150px", objectFit: "cover" }} />
                     : <span>{r.icon}</span>
                   }
                 </div>
