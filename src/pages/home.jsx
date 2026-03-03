@@ -14,6 +14,11 @@ import four from "../images/3.jpg";
 import five from "../images/erkaym.jpg";
 import six from "../images/erkaym2.jpg";
 import seven from "../images/jasmina.jpg";
+import eight from "../images/12.jpg";
+import nine from "../images/13.jpg";
+import ten from "../images/14.jpg";
+import eleven from "../images/15.jpg";
+import twelve from "../images/16.jpg";
 
 import {
   FaCrown,
@@ -153,7 +158,21 @@ const photos = [
     src: seven,
     name: "Аида Маматова"
   },
-  
+  {
+    src: eight,
+  },
+  {
+    src: nine,
+  },
+  {
+    src: ten,
+  },
+  {
+    src: eleven,
+  },
+  {
+    src: twelve,
+  }
 ];
 
 // ========== TEXT REVIEWS ==========
