@@ -7,20 +7,58 @@ import language from "../images/language.png";
 import rus from "../images/res.png";
 
 const allCourses = [
-  { icon: lider,       name: "Лидерлик (Оффлайн)",      duration: "40 күн • 1.5 саат",        category: "Өнүгүү", type: "Оффлайн" },
-  { icon: lider,       name: "Лидерлик (Онлайн)",       duration: "40 күн • 1.5 саат",        category: "Өнүгүү", type: "Онлайн"  },
-  { icon: tezOkuu,     name: "Тез окуу (Оффлайн)",      duration: "1 ай • 12 күн • 1.5 саат", category: "Өнүгүү", type: "Оффлайн" },
-  { icon: tezOkuu,     name: "Тез окуу (Онлайн)",       duration: "1 ай • 12 күн • 1.5 саат", category: "Өнүгүү", type: "Онлайн"  },
-  { icon: jetiTepkich, name: "Жети тепкич (Оффлайн)",   duration: "1 ай • 6 күн • 2 саат",    category: "Өнүгүү", type: "Оффлайн" },
-  { icon: jetiTepkich, name: "Жети тепкич (Онлайн)",    duration: "1 ай • 6 күн • 2 саат",    category: "Өнүгүү", type: "Онлайн"  },
-  { icon: language,    name: "Англис тили",             duration: "1 ай • 6 күн • 2 саат",    category: "Тилдер", type: "Стандарт" },
-  { icon: rus,    name: "Орус тили",               duration: "1 ай • 6 күн • 2 саат",    category: "Тилдер", type: "Стандарт" },
-  { icon: jetiTepkich, name: "IT көндүмдөрү (Оффлайн)", duration: "1 ай • 12 күн • 2 саат",   category: "IT",     type: "Оффлайн" },
+  {
+    icon: lider,
+    name: "Лидерлик Оффлайн, Онлайн",
+    duration: "40 күн • 1.5 саат",
+    category: "Өнүгүү",
+    type: "Оффлайн",
+  },
+ 
+  {
+    icon: tezOkuu,
+    name: "Тез окуу Оффлайн, Онлайн",
+    duration: "1 ай • 12 күн • 1.5 саат",
+    category: "Өнүгүү",
+    type: "Оффлайн",
+  },
+  {
+    icon: jetiTepkich,
+    name: "Жети тепкич Оффлайн, Онлайн",
+    duration: "1 ай • 6 күн • 2 саат",
+    category: "Өнүгүү",
+    type: "Оффлайн",
+  },
+  {
+    icon: language,
+    name: "Англис тили",
+    duration: "1 ай • 6 күн • 2 саат",
+    category: "Тилдер",
+    type: "Стандарт",
+  },
+  {
+    icon: rus,
+    name: "Орус тили",
+    duration: "1 ай • 6 күн • 2 саат",
+    category: "Тилдер",
+    type: "Стандарт",
+  },
+  {
+    icon: jetiTepkich,
+    name: "IT көндүмдөрү (Оффлайн)",
+    duration: "1 ай • 12 күн • 2 саат",
+    category: "IT",
+    type: "Оффлайн",
+  },
 ];
 
 const tagMap = {
-  Өнүгүү: "tag-dev", Тилдер: "tag-lang", IT: "tag-it",
-  Оффлайн: "tag-offline", Онлайн: "tag-online", Стандарт: "tag-std",
+  Өнүгүү: "tag-dev",
+  Тилдер: "tag-lang",
+  IT: "tag-it",
+  Оффлайн: "tag-offline",
+  Онлайн: "tag-online",
+  Стандарт: "tag-std",
 };
 
 const filters = ["Баары", "Өнүгүү", "Тилдер", "IT"];
@@ -28,9 +66,10 @@ const filters = ["Баары", "Өнүгүү", "Тилдер", "IT"];
 export default function CoursesSection() {
   const [filter, setFilter] = useState("Баары");
 
-  const filteredCourses = filter === "Баары"
-    ? allCourses
-    : allCourses.filter((c) => c.category === filter);
+  const filteredCourses =
+    filter === "Баары"
+      ? allCourses
+      : allCourses.filter((c) => c.category === filter);
 
   return (
     <section className="courses-sec reveal">
@@ -52,14 +91,16 @@ export default function CoursesSection() {
             <Link to="/courses" className="course-card" key={i}>
               <div className="course-thumb">
                 <div className="course-icon">
-                <img 
-  src={c.icon} 
-  alt={c.name} 
-  className={c.name === "Орус тили" ? "rus-img" : ""}
-/>
+                  <img
+                    src={c.icon}
+                    alt={c.name}
+                    className={c.name === "Орус тили" ? "rus-img" : ""}
+                  />
                 </div>
                 <div className="course-tags">
-                  <span className={`tag ${tagMap[c.category]}`}>{c.category}</span>
+                  <span className={`tag ${tagMap[c.category]}`}>
+                    {c.category}
+                  </span>
                   <span className={`tag ${tagMap[c.type]}`}>{c.type}</span>
                 </div>
               </div>
