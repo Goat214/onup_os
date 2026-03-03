@@ -31,7 +31,7 @@ import masterklass from "../images/msterklass.jpg";
 import trophy from "../images/trophy.jpg";
 import oip from "../images/oip.webp";
 import sayaqat from "../images/sayaqat.jpg";
-import serti from "../images/serti.jpg";
+import sertifikat from "../images/serti.jpg";
 
 const slides = [
   { title: "ӨНҮП ӨС – мастер-класстар жана сынактар!", desc: "«ӨНҮП ӨС» окуу борборунда ай сайын өтүүчү мастер-класстарга жана сынактарга катышуу менен практикалык жана маанилүү көндүмдөргө ээ болуп өнүп өсүңүз!" },
@@ -80,7 +80,7 @@ const whyCards = [
   { icon: oip, isImg: true, title: "Сапаттуу билим", desc: "Дайыма жаңыланып турган курстар жана чоң тажрыйбага ээ устаттар." },
   { icon: trophy, isImg: true, title: "Үзгүлтүксүз мелдештер", desc: "Китеп сынактар, мелдештер." },
   { icon: masterklass, isImg: true, title: "Бекер мастер-класстар", desc: "Тармак адистери менен дайыма өткөрүлүүчү бекер мастер-класстар." },
-  { icon: serti, isImg: true, title: "Сертификат", desc: "Курсту ийгиликтүү аяктаган окуучулар «ӨНҮП ӨС» дипломун жана сертификатын алат." },
+  { icon: sertifikat, isImg: true, title: "Сертификат", desc: "Курсту ийгиликтүү аяктаган окуучулар «ӨНҮП ӨС» дипломун жана сертификатын алат." },
   { icon: sayaqat, isImg: true, title: "Саякатто", desc: "Курсту ийгиликтүү аяктаган окуучулар музейлерге, библотекаларга тарыхый жана эс алуу жайларына 'ӨНҮП ӨС' окуу борборунун генеральдык директорун буйругу менен саякаттоо мүмкүнчүлүгүнө ээ болушат." },
 ];
 
