@@ -72,7 +72,7 @@ export default function CoursesSection() {
       : allCourses.filter((c) => c.category === filter);
 
   return (
-    <section className="courses-sec reveal">
+    <section id="courses" className="courses-sec reveal" > 
       <div className="wrap">
         <h2 className="sec-title">Курстар</h2>
         <div className="courses-filter">
