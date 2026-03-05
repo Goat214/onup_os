@@ -5,6 +5,7 @@ import tezOkuu from "../images/tez_okuu.png";
 import jetiTepkich from "../images/jeti_tepkich.png";
 import language from "../images/language.png";
 import rus from "../images/res.png";
+import programer from "../images/programer.png";
 
 const allCourses = [
   {
@@ -44,7 +45,7 @@ const allCourses = [
     type: "Стандарт",
   },
   {
-    icon: jetiTepkich,
+    icon: programer,
     name: "IT көндүмдөрү (Оффлайн)",
     duration: "1 ай • 12 күн • 2 саат",
     category: "IT",
