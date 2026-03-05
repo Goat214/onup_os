@@ -1,4 +1,5 @@
 import { useState } from "react";
+import center from "../images/centr.jpg";
 
 const BOT_TOKEN = "8304491289:AAEhClRt_023T0uBxro_ni2vOMDx7lHkT6A";
 const CHAT_ID   = "6518481355";
@@ -112,7 +113,7 @@ export function ConsultWithPhoto() {
       <div className="wrap">
         <div className="consult-photo-inner">
           <div className="consult-photo-img">
-            <div className="img-ph">🏫</div>
+            <div className="img-ph"><img src={center} alt="" /></div>
           </div>
           <div className="consult-box">
             <h2>Консультация</h2>

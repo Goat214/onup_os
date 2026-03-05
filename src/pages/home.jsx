@@ -8,6 +8,7 @@ import Cunsult, { ConsultWithPhoto, ConsultDark } from "../components/Cunsult";
 import "../css/navbar.css";
 import "../css/courses.css";
 import "../css/blogSection.css";
+import Location from "../components/Location";
 
 // ── Rasm importlari ──────────────────────────────────────────
 import one        from "../images/nafisa3.jpg";
@@ -33,6 +34,7 @@ import trophy      from "../images/trophy.jpg";
 import oip         from "../images/OIP.webp";
 import sayaqat     from "../images/sayaqat.jpg";
 import sertifikat  from "../images/serti.jpg";
+import center    from "../images/centr.jpg";
 
 // ── Telegram config ──────────────────────────────────────────
 const BOT_TOKEN = "8304491289:AAEhClRt_023T0uBxro_ni2vOMDx7lHkT6A";
@@ -376,137 +378,8 @@ export default function Home() {
       {/* ── CONSULT 3 (кара фон) ── */}
       <ConsultDark />
 
-      {/* ── ENROLL ── */}
-      <section className="enroll-sec reveal">
-        <div className="wrap">
-          <h2 className="sec-title">Жакынкы ачылуучу топторго жазылыңыз</h2>
-          <div className="enroll-inner">
-            <p>
-              Ар бир курс башталаардан мурун тааныштыруу сабак өткөрүлөт. Анда
-              сиз курс боюнча бардык маалыматка ээ болосуз, устат менен
-              таанышасыз жана курска жазыла аласыз.
-            </p>
-            <form className="enroll-form" onSubmit={submitEnroll}>
-              <select value={enroll.course} onChange={setE("course")}>
-                <option value="">Курс тандаңыз</option>
-                {courseOptions.map((c) => (
-                  <option key={c} value={c}>{c}</option>
-                ))}
-              </select>
-
-              <select value={enroll.branch} onChange={setE("branch")}>
-                <option value="">Филиалды тандаңыз</option>
-                <option value="Кадамжай">Кадамжай</option>
-              </select>
-
-              <div className="ef-row">
-                <input type="date" value={enroll.date} onChange={setE("date")} />
-                <input type="time" value={enroll.time} onChange={setE("time")} />
-              </div>
-
-              <h4>Катталуу үчүн форманы толтуруңуз</h4>
-
-              <input
-                className="c-form-name"
-                type="text"
-                placeholder="Атыңыз"
-                value={enroll.name}
-                onChange={setE("name")}
-              />
-
-              <div className="c-phone-row">
-                <span className="c-phone-prefix">+996</span>
-                <input
-                  className="c-phone-input"
-                  type="tel"
-                  placeholder="700 000 000"
-                  value={enroll.phone}
-                  onChange={(e) =>
-                    setEnroll((prev) => ({
-                      ...prev,
-                      phone: e.target.value.replace(/\D/g, "").slice(0, 9),
-                    }))
-                  }
-                />
-              </div>
-
-              <label className="c-agree">
-                <input
-                  type="checkbox"
-                  checked={enroll.agree}
-                  onChange={(e) =>
-                    setEnroll((prev) => ({ ...prev, agree: e.target.checked }))
-                  }
-                />
-                Жеке маалыматтарды{" "}
-                <a href="#oferta">иштетүүгө</a> макулмун
-              </label>
-
-              <button type="submit" className="btn-green enroll-btn" disabled={enrolling}>
-                {enrolling ? "Жөнөтүлүүдө..." : "Топко жазылуу"}
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
       {/* ── LOCATION ── */}
-      <section className="loc-sec reveal" id="contact">
-        <div className="wrap">
-          <div className="loc-top">
-            <h2>Биздин даректер</h2>
-            <div className="loc-tab-wrap">
-              <button
-                className={`loc-tab ${locTab === 0 ? "active" : ""}`}
-                onClick={() => setLocTab(0)}
-              >
-                Кадамжай
-              </button>
-            </div>
-          </div>
-          <div className="loc-grid">
-            <div className="loc-left">
-              <div className="loc-photo" />
-              <div className="loc-rows">
-                <div className="loc-row">
-                  <span className="loc-row-icon">📍</span>
-                  <div>
-                    <strong>Дарек</strong>
-                    <p>Кадамжай району Халмион айылы</p>
-                    <p className="loc-hint">Чайхана ИНЖИР дун жанында</p>
-                  </div>
-                </div>
-                <div className="loc-row">
-                  <span className="loc-row-icon">🕐</span>
-                  <div>
-                    <strong>Иш убактысы</strong>
-                    <p>09:00 – 16:00</p>
-                  </div>
-                </div>
-                <div className="loc-row">
-                  <span className="loc-row-icon">📞</span>
-                  <div>
-                    <strong>Телефон</strong>
-                    <a href="tel:+996773101069">+996 773 101 069</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="map-box">
-              <iframe
-                title="Onup OS — Кадамжай"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d191.132!2d71.632478!3d40.192080!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb950012257a25%3A0x90b8aa1e8227dddb!2z0qvQvdKv0L8g06nRgdGC!5e0!3m2!1suz!2s!4v1710000000000!5m2!1suz!2s"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+       <Location />
 
       {/* ── FOOTER ── */}
       <footer className="footer">

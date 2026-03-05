@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.loc-sec {
+  padding: 64px 0;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.loc-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.loc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.loc-top h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+}
+.loc-dropdown-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.loc-dropdown-label {
+  font-size: 0.88rem;
+  color: #555;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.loc-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1.5px solid #d0d5dd;
+  color: #111;
+  padding: 8px 36px 8px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  min-width: 150px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s;
+}
+.loc-dropdown:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+/* GRID */
+.loc-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* LEFT CARD */
+.loc-card {
+  background: #fff;
+  border: 1.5px solid #e8eaed;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+.loc-card-city {
+  padding: 16px 20px 12px;
+  border-bottom: 1.5px solid #f0f2f5;
+}
+.loc-card-city h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+}
+.loc-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.loc-photo-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.loc-info {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.loc-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.loc-info-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.loc-info-value {
+  font-size: 0.9rem;
+  color: #222;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.loc-info-hint {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2px;
+  font-style: italic;
+}
+.loc-info-link {
+  font-size: 0.9rem;
+  color: #1a73e8;
+  font-weight: 600;
+  text-decoration: none;
+}
+.loc-info-link:hover {
+  text-decoration: underline;
+}
+.loc-divider {
+  height: 1px;
+  background: #f0f2f5;
+  margin: 0;
+}
+
+/* MAP */
+.loc-map {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+  min-height: 420px;
+  height: 100%;
+}
+.loc-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .loc-grid {
+    grid-template-columns: 1fr;
+  }
+  .loc-map {
+    min-height: 300px;
+  }
+  .loc-map iframe {
+    min-height: 300px;
+  }
+  .loc-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
