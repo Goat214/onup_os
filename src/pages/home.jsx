@@ -11,34 +11,35 @@ import "../css/blogSection.css";
 import Location from "../components/Location";
 
 // ── Rasm importlari ──────────────────────────────────────────
-import one        from "../images/nafisa3.jpg";
-import two        from "../images/nafisa.jpg";
-import four       from "../images/3.jpg";
-import five       from "../images/erkaym.jpg";
-import six        from "../images/erkaym2.jpg";
-import seven      from "../images/jasmina.jpg";
-import eight      from "../images/12.jpg";
-import nine       from "../images/13.jpg";
-import ten        from "../images/14.jpg";
-import eleven     from "../images/15.jpg";
-import twelve     from "../images/16.jpg";
-import capImg      from "../images/student-cap.webp";
+import one from "../images/nafisa3.jpg";
+import two from "../images/nafisa.jpg";
+import four from "../images/3.jpg";
+import five from "../images/erkaym.jpg";
+import six from "../images/erkaym2.jpg";
+import seven from "../images/jasmina.jpg";
+import eight from "../images/12.jpg";
+import nine from "../images/13.jpg";
+import ten from "../images/14.jpg";
+import eleven from "../images/15.jpg";
+import twelve from "../images/16.jpg";
+import capImg from "../images/student-cap.webp";
 import briefcaseImg from "../images/student-briefcase.webp";
-import lider       from "../images/lider.png";
-import tezOkuu     from "../images/tez_okuu.png";
+import lider from "../images/lider.png";
+import tezOkuu from "../images/tez_okuu.png";
 import jetiTepkich from "../images/jeti_tepkich.png";
-import language    from "../images/language.png";
-import book        from "../images/book.png";
+import language from "../images/language.png";
+import book from "../images/book.png";
 import masterklass from "../images/masterkalss.jpg";
-import trophy      from "../images/trophy.jpg";
-import oip         from "../images/OIP.webp";
-import sayaqat     from "../images/sayaqat.jpg";
-import sertifikat  from "../images/serti.jpg";
-import center    from "../images/centr.jpg";
+import trophy from "../images/trophy.jpg";
+import oip from "../images/OIP.webp";
+import sayaqat from "../images/sayaqat.jpg";
+import sertifikat from "../images/serti.jpeg";
+import center from "../images/centr.jpg";
+import ataene from "../images/ata_ene.jpeg";
 
 // ── Telegram config ──────────────────────────────────────────
 const BOT_TOKEN = "8304491289:AAEhClRt_023T0uBxro_ni2vOMDx7lHkT6A";
-const CHAT_ID   = "6518481355";
+const CHAT_ID = "6518481355";
 
 async function sendToTelegram(fields) {
   const text = Object.entries(fields)
@@ -72,65 +73,121 @@ const slides = [
 ];
 
 const photos = [
-  { src: one,    name: "Айбек Усупов"       },
-  { src: two,    name: "Гүлнара Асанова"    },
-  { src: four,   name: "Мирлан Беков"       },
-  { src: five,   name: "Зарина Токтосунова" },
-  { src: six,    name: "Нурбек Жолдошев"    },
-  { src: seven,  name: "Аида Маматова"      },
-  { src: eight,  name: "" },
-  { src: nine,   name: "" },
-  { src: ten,    name: "" },
+  { src: one, name: "" },
+  { src: two, name: "" },
+  { src: four, name: "" },
+  { src: five, name: "" },
+  { src: six, name: "" },
+  { src: seven, name: "" },
+  { src: eight, name: "" },
+  { src: nine, name: "" },
+  { src: ten, name: "" },
   { src: eleven, name: "" },
   { src: twelve, name: "" },
+  { src: ataene, name: "" },
 ];
 
 const bonuses = [
-  { emoji: "💰", title: "10 000 сомго чейинки акчалай сыйлык",        desc: "Англис тили курсу IELTS үчүн 10 000 сомго чейин каржылоо." },
-  { emoji: "📚", title: "Онлайн курсту бекер алыңыз",                 desc: "Алдын ала толук төлөм төлөгөндөр үчүн ӨНҮП ӨС платформасынан 10 000 сомго чейинки курстар бекер берилет." },
-  { emoji: "🎓", title: "Чет өлкөгө саякаттоого мүмкүнчүлүк",        desc: "Мелдештер учурунда жылына жок дегенде бир жолу чет өлкөгө акысыз саякаттоо мүмкүнчүлүгүн беребиз." },
-  { emoji: "✈️", title: "Лидер VIP групасын бүтүргөндөргө Умра",     desc: "Лидер VIP групаны ийгиликтүү бүтүргөндөргө Саудияга умрага сертификат." },
-  { emoji: "🏖️", title: "Ысык-Көлгө путёвка",                        desc: "Лидер групасын ийгиликтүү бүтүргөндөргө Ысык-Көлгө путёвка." },
+  {
+    emoji: "💰",
+    title: "10 000 сомго чейинки акчалай сыйлык",
+    desc: "Англис тили курсу IELTS үчүн 10 000 сомго чейин каржылоо.",
+  },
+  {
+    emoji: "📚",
+    title: "Онлайн курсту бекер алыңыз",
+    desc: "Алдын ала толук төлөм төлөгөндөр үчүн ӨНҮП ӨС платформасынан 10 000 сомго чейинки курстар бекер берилет.",
+  },
+  {
+    emoji: "🎓",
+    title: "Чет өлкөгө саякаттоого мүмкүнчүлүк",
+    desc: "Мелдештер учурунда жылына жок дегенде бир жолу чет өлкөгө акысыз саякаттоо мүмкүнчүлүгүн беребиз.",
+  },
+  {
+    emoji: "✈️",
+    title: "Лидер VIP групасын бүтүргөндөргө Умра",
+    desc: "Лидер VIP групаны ийгиликтүү бүтүргөндөргө Саудияга умрага сертификат.",
+  },
+  {
+    emoji: "🏖️",
+    title: "Ысык-Көлгө путёвка",
+    desc: "Лидер групасын ийгиликтүү бүтүргөндөргө Ысык-Көлгө путёвка.",
+  },
 ];
 
 const directions = [
-  { img: lider,       title: "ЛИДЕР",       path: "/courses" },
-  { img: tezOkuu,     title: "ТЕЗ ОКУУ",    path: "/courses" },
+  { img: lider, title: "ЛИДЕР", path: "/courses" },
+  { img: tezOkuu, title: "ТЕЗ ОКУУ", path: "/courses" },
   { img: jetiTepkich, title: "ЖЕТИ ТЕПКИЧ", path: "/courses" },
-  { img: language,    title: "ТИЛДЕР",      path: "/courses" },
+  { img: language, title: "ТИЛДЕР", path: "/courses" },
 ];
 
 const eduTypes = [
-  { emoji: "🎒", title: "ЖЕКЕЧЕ",    path: "/courses" },
-  { emoji: "👥", title: "ЖАЛПЫ",     path: "/courses" },
+  { emoji: "🎒", title: "ЖЕКЕЧЕ", path: "/courses" },
+  { emoji: "👥", title: "ЖАЛПЫ", path: "/courses" },
   { emoji: "💻", title: "АРАЛЫКТАН", path: "/courses" },
 ];
 
 const courseOptions = [
-  "Лидерлик (Оффлайн)", "Лидерлик (Онлайн)",
-  "Тез окуу (Оффлайн)", "Тез окуу (Онлайн)",
-  "Жети тепкич (Оффлайн)", "Жети тепкич (Онлайн)",
-  "Англис тили", "Орус тили", "IT көндүмдөрү (Оффлайн)",
+  "Лидерлик (Оффлайн)",
+  "Лидерлик (Онлайн)",
+  "Тез окуу (Оффлайн)",
+  "Тез окуу (Онлайн)",
+  "Жети тепкич (Оффлайн)",
+  "Жети тепкич (Онлайн)",
+  "Англис тили",
+  "Орус тили",
+  "IT көндүмдөрү (Оффлайн)",
 ];
 
 const whyCards = [
-  { icon: book,        title: "Бекер коворкинг",       desc: "24/7 форматында иштеген бекер коворкинг жана wifi." },
-  { icon: oip,         title: "Сапаттуу билим",         desc: "Дайыма жаңыланып турган курстар жана чоң тажрыйбага ээ устаттар." },
-  { icon: trophy,      title: "Үзгүлтүксүз мелдештер", desc: "Китеп сынактар, мелдештер." },
-  { icon: masterklass, title: "Бекер мастер-класстар",  desc: "Тармак адистери менен дайыма өткөрүлүүчү бекер мастер-класстар." },
-  { icon: sertifikat,  title: "Сертификат",             desc: "Курсту ийгиликтүү аяктаган окуучулар «ӨНҮП ӨС» дипломун жана сертификатын алат." },
-  { icon: sayaqat,     title: "Саякат",                 desc: "Ийгиликтүү бүтүрүүчүлөр музейлерге, библиотекаларга жана эс алуу жайларына саякат жасоо мүмкүнчүлүгүнө ээ болушат." },
+  {
+    icon: book,
+    title: "Бекер коворкинг",
+    desc: "24/7 форматында иштеген бекер коворкинг жана wifi.",
+  },
+  {
+    icon: oip,
+    title: "Сапаттуу билим",
+    desc: "Дайыма жаңыланып турган курстар жана чоң тажрыйбага ээ устаттар.",
+  },
+  {
+    icon: trophy,
+    title: "Үзгүлтүксүз мелдештер",
+    desc: "Китеп сынактар, мелдештер.",
+  },
+  {
+    icon: masterklass,
+    title: "Бекер мастер-класстар",
+    desc: "Тармак адистери менен дайыма өткөрүлүүчү бекер мастер-класстар.",
+  },
+  {
+    icon: sertifikat,
+    title: "Сертификат",
+    desc: "Курсту ийгиликтүү аяктаган окуучулар «ӨНҮП ӨС» дипломун жана сертификатын алат.",
+  },
+  {
+    icon: sayaqat,
+    title: "Саякат",
+    desc: "Ийгиликтүү бүтүрүүчүлөр музейлерге, библиотекаларга жана эс алуу жайларына саякат жасоо мүмкүнчүлүгүнө ээ болушат.",
+  },
 ];
 
 const ENROLL_INIT = {
-  course: "", branch: "", date: "", time: "", name: "", phone: "", agree: false,
+  course: "",
+  branch: "",
+  date: "",
+  time: "",
+  name: "",
+  phone: "",
+  agree: false,
 };
 
 // ── Component ────────────────────────────────────────────────
 export default function Home() {
-  const [slide,     setSlide]    = useState(0);
-  const [locTab,    setLocTab]   = useState(0);
-  const [enroll,    setEnroll]   = useState(ENROLL_INIT);
+  const [slide, setSlide] = useState(0);
+  const [locTab, setLocTab] = useState(0);
+  const [enroll, setEnroll] = useState(ENROLL_INIT);
   const [enrolling, setEnrolling] = useState(false);
   const intervalRef = useRef(null);
 
@@ -168,18 +225,19 @@ export default function Home() {
   // Enroll submit → Telegram
   const submitEnroll = async (e) => {
     e.preventDefault();
-    if (!enroll.course || !enroll.phone) return alert("Зарыл талааларды толтуруңуз!");
-    if (!enroll.agree)                   return alert("Макулдукту белгилеңиз!");
+    if (!enroll.course || !enroll.phone)
+      return alert("Зарыл талааларды толтуруңуз!");
+    if (!enroll.agree) return alert("Макулдукту белгилеңиз!");
 
     setEnrolling(true);
     try {
       await sendToTelegram({
-        "📋 Форма":   "Топко жазылуу",
-        "📚 Курс":    enroll.course,
-        "🏢 Филиал":  enroll.branch  || "—",
-        "📅 Күн":     enroll.date    || "—",
-        "🕐 Убакыт":  enroll.time    || "—",
-        "👤 Ат":      enroll.name    || "—",
+        "📋 Форма": "Топко жазылуу",
+        "📚 Курс": enroll.course,
+        "🏢 Филиал": enroll.branch || "—",
+        "📅 Күн": enroll.date || "—",
+        "🕐 Убакыт": enroll.time || "—",
+        "👤 Ат": enroll.name || "—",
         "📞 Телефон": `+996${enroll.phone}`,
       });
       alert("Катталдыңыз! Жакында чалабыз. ✅");
@@ -204,10 +262,15 @@ export default function Home() {
       <section className="hero">
         <div className="wrap">
           {slides.map((s, i) => (
-            <div key={i} className={`hero-slide ${i === slide ? "active" : ""}`}>
+            <div
+              key={i}
+              className={`hero-slide ${i === slide ? "active" : ""}`}
+            >
               <h1>{s.title}</h1>
               <p>{s.desc}</p>
-              <a href="#consult1" className="btn-hero">консультация алуу →</a>
+              <a href="#consult1" className="btn-hero">
+                консультация алуу →
+              </a>
             </div>
           ))}
           <div className="hero-dots">
@@ -240,15 +303,48 @@ export default function Home() {
             {[
               {
                 desc: "Мээни программалоо жана дисциплина аркылуу адамды жаңы деңгээлге чыгарган борбор.",
-                svg: <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 3a3 3 0 0 0-3 3v1a2 2 0 0 0-2 2 2 2 0 0 0 2 2v1a3 3 0 0 0 3 3"/><path d="M15 3a3 3 0 0 1 3 3v1a2 2 0 0 1 2 2 2 2 0 0 1-2 2v1a3 3 0 0 1-3 3"/><path d="M9 15a3 3 0 0 0 6 0"/></svg>,
+                svg: (
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="26"
+                    height="26"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 3a3 3 0 0 0-3 3v1a2 2 0 0 0-2 2 2 2 0 0 0 2 2v1a3 3 0 0 0 3 3" />
+                    <path d="M15 3a3 3 0 0 1 3 3v1a2 2 0 0 1 2 2 2 2 0 0 1-2 2v1a3 3 0 0 1-3 3" />
+                    <path d="M9 15a3 3 0 0 0 6 0" />
+                  </svg>
+                ),
               },
               {
                 desc: "Лидерлик сапаттарды өнүктүрүү менен коомдо өз ордун табууга жол көрсөтөт.",
-                svg: <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z"/><path d="M12 14a2 2 0 0 0 2-2"/></svg>,
+                svg: (
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="26"
+                    height="26"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-4 4-8 4-8z" />
+                    <path d="M12 14a2 2 0 0 0 2-2" />
+                  </svg>
+                ),
               },
               {
                 desc: "10 000дөн ашык студентти жана 100дөн ашык команданы бириктирген инновация борбору.",
-                svg: <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M16 11c1.66 0 3-1.34 3-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.93 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>,
+                svg: (
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="white">
+                    <path d="M16 11c1.66 0 3-1.34 3-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.93 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                  </svg>
+                ),
               },
             ].map((card, i) => (
               <div className="about-card" key={i}>
@@ -265,12 +361,15 @@ export default function Home() {
         <div className="wrap">
           <h2 className="stats-title">«Onup OS» натыйжасы сандарда</h2>
           <p className="stats-sub">
-            2021-жылдын 10-июнь айынан 2026-жылдын февраль айына чейинки статистика
+            2021-жылдын 10-июнь айынан 2026-жылдын февраль айына чейинки
+            статистика
           </p>
           <div className="stats-row">
             <div className="stat-card">
               <div className="stat-num">10,000+</div>
-              <div className="stat-lbl">Ушул убакка чейин бүтүргөн студенттер</div>
+              <div className="stat-lbl">
+                Ушул убакка чейин бүтүргөн студенттер
+              </div>
               <div className="stat-img-wrap">
                 <img src={capImg} alt="graduation cap" className="stat-img" />
               </div>
@@ -313,7 +412,11 @@ export default function Home() {
           <div className="gallery-track">
             {[...photos, ...photos].map((photo, i) => (
               <div className="gallery-card" key={i}>
-                <img src={photo.src} alt={photo.name || "Сүрөт"} loading="lazy" />
+                <img
+                  src={photo.src}
+                  alt={photo.name || "Сүрөт"}
+                  loading="lazy"
+                />
                 {photo.name && (
                   <div className="gallery-overlay">
                     <span>{photo.name}</span>
@@ -328,7 +431,9 @@ export default function Home() {
       {/* ── BONUSES ── */}
       <section className="bonus-sec reveal">
         <div className="wrap">
-          <h2 className="sec-title">Бүтүрүүчүлөр үчүн бонустар жана сыйлыктар</h2>
+          <h2 className="sec-title">
+            Бүтүрүүчүлөр үчүн бонустар жана сыйлыктар
+          </h2>
           <div className="bonus-grid">
             {bonuses.map((b, i) => (
               <div className="bonus-card" key={i}>
@@ -379,7 +484,7 @@ export default function Home() {
       <ConsultDark />
 
       {/* ── LOCATION ── */}
-       <Location />
+      <Location />
 
       {/* ── FOOTER ── */}
       <footer className="footer">
@@ -397,7 +502,9 @@ export default function Home() {
             <div className="footer-links-col">
               <Link to="/courses">Курстар</Link>
               <a href="#directions">Багыттар</a>
-              <a href="#" target="_blank" rel="noreferrer">Онлайн платформа</a>
+              <a href="#" target="_blank" rel="noreferrer">
+                Онлайн платформа
+              </a>
               <a href="#oferta">Жалпы оферта</a>
             </div>
           </div>
