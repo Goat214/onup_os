@@ -14,14 +14,15 @@ const allCourses = [
     duration: "40 күн • 1.5 саат",
     category: "Лидердик",
     type: "Оффлайн",
+    path: "/courses/lider", // ✅ Har bir kursga o'z yo'li
   },
- 
   {
     icon: tezOkuu,
     name: "Тез окуу Оффлайн, Онлайн",
     duration: "1 ай • 12 күн • 1.5 саат",
     category: "Тез окуу",
     type: "Оффлайн",
+    path: "/courses/tez-okuu",
   },
   {
     icon: jetiTepkich,
@@ -29,6 +30,7 @@ const allCourses = [
     duration: "1 ай • 6 күн • 2 саат",
     category: "Өнүгүү",
     type: "Оффлайн",
+    path: "/courses/jeti-tepkich",
   },
   {
     icon: language,
@@ -36,6 +38,7 @@ const allCourses = [
     duration: "1 ай • 8 күн • 2 саат",
     category: "Тилдер",
     type: "Стандарт",
+    path: "/courses/english",
   },
   {
     icon: rus,
@@ -43,13 +46,15 @@ const allCourses = [
     duration: "1 ай • 8 күн • 2 саат",
     category: "Тилдер",
     type: "Стандарт",
+    path: "/courses/russian",
   },
   {
     icon: programer,
     name: "IT көндүмдөрү (Оффлайн)",
     duration: "1 ай • 12 күн • 2 саат",
     category: "IT",
-    type: "Оффлайн" ,
+    type: "Оффлайн",
+    path: "/courses/it",
   },
 ];
 
@@ -62,7 +67,7 @@ const tagMap = {
   Стандарт: "tag-std",
 };
 
-const filters = ["Баары", "Лидер","Тез окуу", "Тилдер", "IT"];
+const filters = ["Баары", "Лидер", "Тез окуу", "Тилдер", "IT"];
 
 export default function CoursesSection() {
   const [filter, setFilter] = useState("Баары");
@@ -73,7 +78,7 @@ export default function CoursesSection() {
       : allCourses.filter((c) => c.category === filter);
 
   return (
-    <section id="courses" className="courses-sec reveal" > 
+    <section id="courses" className="courses-sec reveal">
       <div className="wrap">
         <h2 className="sec-title">Курстар</h2>
         <div className="courses-filter">
@@ -89,7 +94,11 @@ export default function CoursesSection() {
         </div>
         <div className="courses-grid">
           {filteredCourses.map((c, i) => (
-            <Link to="/courses" className="course-card" key={i}>
+            <Link
+              to={c.path} // ✅ Endi har bir kurs o'z sahifasiga o'tadi
+              className="course-card"
+              key={i}
+            >
               <div className="course-thumb">
                 <div className="course-icon">
                   <img
