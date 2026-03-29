@@ -1,13 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/CoursePage.css";
 
-/**
- * CoursePage — универсал компонент бардык курстар үчүн
- * Props:
- *   course: { title, tag, emoji, subtitle, heroText, stats[], aboutText[], aboutList[], curriculum[], prices[], accentColor, ctaText, breadcrumb }
- */
 export default function CoursePage({ course }) {
   const accent = course.accentColor || "#22c55e";
+
+  // Agar bir nechta location bo'lsa — tab
+  const hasMultiLocation = course.packages && course.packages.length > 1;
+  const [activeTab, setActiveTab] = useState(0);
+  const activePkg = course.packages ? course.packages[activeTab] : null;
 
   return (
     <div className="cp-page">
@@ -25,13 +26,15 @@ export default function CoursePage({ course }) {
       <section className="cp-hero" style={{ "--accent": accent }}>
         <div className="cp-hero__bg" />
         <div className="cp-hero__grid" />
-        <div className="cp-hero__glow" style={{ background: `radial-gradient(ellipse 60% 50% at 50% 50%, ${accent}14 0%, transparent 70%)` }} />
-
+        <div className="cp-hero__glow"
+          style={{ background: `radial-gradient(ellipse 60% 50% at 50% 50%, ${accent}14 0%, transparent 70%)` }}
+        />
         <div className="cp-hero__content">
-          <div className="cp-hero__tag" style={{ background: `${accent}22`, border: `1px solid ${accent}66`, color: accent }}>
+          <div className="cp-hero__tag"
+            style={{ background: `${accent}22`, border: `1px solid ${accent}66`, color: accent }}
+          >
             {course.emoji} {course.tag}
           </div>
-
           <h1 className="cp-hero__title">
             {course.title.map((part, i) =>
               part.accent
@@ -39,15 +42,12 @@ export default function CoursePage({ course }) {
                 : <span key={i}>{part.text}</span>
             )}
           </h1>
-
           <p className="cp-hero__sub">{course.subtitle}</p>
-
           <div className="cp-hero__btns">
             <a href="#pricing" className="cp-btn-primary" style={{ background: accent }}>Катталуу</a>
             <a href="#about" className="cp-btn-outline">Толугураак</a>
           </div>
         </div>
-
         <div className="cp-hero__chevron">⌄</div>
       </section>
 
@@ -67,7 +67,6 @@ export default function CoursePage({ course }) {
           <span className="cp-section__tag" style={{ background: `${accent}18`, color: accent }}>Курс жөнүндө</span>
           <h2 className="cp-section__title">{course.aboutTitle}</h2>
           <p className="cp-section__lead">{course.aboutLead}</p>
-
           <div className="cp-about-box">
             {course.aboutText.map((para, i) => (
               <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
@@ -87,11 +86,11 @@ export default function CoursePage({ course }) {
           <span className="cp-section__tag" style={{ background: `${accent}18`, color: accent }}>Программа</span>
           <h2 className="cp-section__title">Курста эмнелерди үйрөнөсүң?</h2>
           <p className="cp-section__lead">{course.currLead}</p>
-
           <div className="cp-curr-grid">
             {course.curriculum.map((item, i) => (
               <div className="cp-curr-card" key={i}>
-                <div className="cp-curr-card__num" style={{ background: `${accent}22`, color: accent }}>{i + 1}</div>
+                <div className="cp-curr-card__num"
+                  style={{ background: `${accent}22`, color: accent }}>{i + 1}</div>
                 <div className="cp-curr-card__text">{item}</div>
               </div>
             ))}
@@ -104,29 +103,71 @@ export default function CoursePage({ course }) {
         <div className="cp-pricing__inner">
           <span className="cp-section__tag" style={{ background: `${accent}18`, color: accent }}>Баалар</span>
           <h2 className="cp-section__title">Курстун баасы</h2>
-          <p className="cp-pricing__sub">Бишкек филиалы үчүн</p>
 
-          <div className="cp-pricing__grid">
-            {course.prices.map((p, i) => (
-              <div className={`cp-price-card ${p.accent ? "cp-price-card--accent" : ""}`}
-                key={i}
-                style={p.accent ? { borderColor: accent } : {}}
-              >
-                {p.badge && (
-                  <div className="cp-price-card__badge" style={{ background: accent }}>{p.badge}</div>
-                )}
-                <div className="cp-price-card__type" style={{ color: accent }}>{p.type}</div>
-                <div className="cp-price-card__amount">{p.amount}</div>
-                <p className="cp-price-card__note">{p.note}</p>
-                <a href="#"
-                  className={p.accent ? "cp-price-card__btn" : "cp-price-card__btn--outline"}
-                  style={p.accent ? { background: accent } : { color: accent, borderColor: accent }}
+          {/* Location tabs */}
+          {hasMultiLocation && (
+            <div className="cp-loc-tabs">
+              {course.packages.map((pkg, i) => (
+                <button
+                  key={i}
+                  className={`cp-loc-tab ${activeTab === i ? "cp-loc-tab--active" : ""}`}
+                  style={activeTab === i ? { background: accent, borderColor: accent } : {}}
+                  onClick={() => setActiveTab(i)}
                 >
-                  Катталуу
-                </a>
-              </div>
-            ))}
-          </div>
+                   {pkg.location}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Price cards */}
+          {activePkg && (
+            <div className="cp-pricing__grid">
+              {activePkg.plans.map((plan, i) => (
+                <div
+                  key={i}
+                  className={`cp-price-card ${plan.accent ? "cp-price-card--accent" : ""}`}
+                  style={plan.accent ? { borderColor: accent } : {}}
+                >
+                  {plan.badge && (
+                    <div className="cp-price-card__badge" style={{ background: accent }}>
+                      {plan.badge}
+                    </div>
+                  )}
+
+                  {/* Type */}
+                  <div className="cp-price-card__type" style={{ color: accent }}>
+                    {plan.type}
+                  </div>
+
+                  {/* Main price */}
+                  <div className="cp-price-card__amount">{plan.amount}</div>
+
+                  {/* Rows table */}
+                  <div className="cp-price-rows">
+                    {plan.rows.map((row, j) => (
+                      <div key={j} className="cp-price-row">
+                        <span className="cp-price-row__label">{row.label}</span>
+                        <span className="cp-price-row__price" style={{ color: accent }}>
+                          {row.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href="#"
+                    className={plan.accent ? "cp-price-card__btn" : "cp-price-card__btn--outline"}
+                    style={plan.accent
+                      ? { background: accent }
+                      : { color: accent, borderColor: accent }}
+                  >
+                    Катталуу
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -134,7 +175,9 @@ export default function CoursePage({ course }) {
       <div className="cp-footer-cta">
         <h2>{course.ctaTitle}</h2>
         <p>{course.ctaSub}</p>
-        <a href="#pricing" className="cp-btn-primary" style={{ background: accent }}>Катталуу →</a>
+        <a href="#pricing" className="cp-btn-primary" style={{ background: accent }}>
+          Катталуу →
+        </a>
       </div>
 
     </div>
