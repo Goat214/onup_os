@@ -10,7 +10,7 @@ export const liderData = {
   title: [
     { text: "Лидерлик — " },
     { text: "Келечегиңди", accent: true },
-    { text: "\nөзүң жарат" },
+    { text: "\  nөзүң жарат" },
   ],
   subtitle:
     "Заманбап лидерлик көндүмдөрүн үйрөн. Командаңды шыктандыр, максаттарыңа жет жана жашооңду өзгөрт.",
@@ -507,4 +507,9 @@ export const russianData = {
   ],
   ctaTitle: "Орус тилин үйрөнүүгө даярсыңбы?",
   ctaSub:   "Азыр эле катталып, биринчи сабагыңды баштагын!",
+};
+export const itData = {
+  breadcrumb: "IT курсу",
+  emoji: "💻",
+  // ... qolgan ma'lumotlar
 };
