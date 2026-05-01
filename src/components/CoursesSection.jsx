@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import lider from "../images/lider.png";
-import tezOkuu from "../images/tez_okuu.png";
-import jetiTepkich from "../images/jeti_tepkich.png";
-import language from "../images/language.png";
-import rus from "../images/res.png";
+import lider from "../images/lider1.webp";
+import tezOkuu from "../images/tezokuu.webp";
+import jetiTepkich from "../images/jetitepkich.jpg";
+import language from "../images/eanglish.jpg";
+import rus from "../images/rus.jpg";
 import programer from "../images/programer.png";
 
 const allCourses = [
@@ -48,14 +48,7 @@ const allCourses = [
     type: "Стандарт",
     path: "/courses/russian",
   },
-  {
-    icon: programer,
-    name: "IT көндүмдөрү (Оффлайн)",
-    duration: "1 ай • 12 күн • 2 саат",
-    category: "IT",
-    type: "Оффлайн",
-    path: "/courses/it",
-  },
+  
 ];
 
 const tagMap = {
