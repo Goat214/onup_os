@@ -6,7 +6,7 @@ import {
   JetiTepkichPage,
   EnglishPage,
   RussianPage,
-  ITPage,
+
 } from "./coursePages";
 
 <Route path="/courses/lider" element={<LiderPage />} />
@@ -24,7 +24,7 @@ function App() {
         <Route path="/courses/jeti-tepkich" element={<JetiTepkichPage />} />
         <Route path="/courses/english"     element={<EnglishPage />} />
         <Route path="/courses/russian"     element={<RussianPage />} />
-        <Route path="/courses/it"          element={<ITPage />} />
+       
       </Routes>
     </BrowserRouter>
   );
