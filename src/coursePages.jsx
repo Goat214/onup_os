@@ -39,6 +39,3 @@ export function RussianPage() {
 }
 
 // ── 6. IT көндүмдөрү ─────────────────────────────────
-export function ITPage() {
-  return <CoursePage course={itData} />;
-}
