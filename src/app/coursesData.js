@@ -359,7 +359,7 @@ export const englishData = {
       location: "Оффлайн",
       plans: [
         {
-          type: "Айма-ай төлөм",
+          type: "Жалпы төлөм",
           amount: "30 000 сом",
           rows: [
             { label: "Айлык төлөм",        price: "5 000 сом" },
@@ -392,7 +392,7 @@ export const englishData = {
       location: "Онлайн",
       plans: [
         {
-          type: "Айма-ай төлөм",
+          type: "Жалпы төлөм",
           amount: "18 000 сом",
           rows: [
             { label: "Айлык төлөм",        price: "3 000 сом" },
@@ -463,7 +463,7 @@ export const russianData = {
       location: "Оффлайн",
       plans: [
         {
-          type: "Айма-ай төлөм",
+          type: "Жалпы төлөм",
           amount: "30 000 сом",
           rows: [
             { label: "Айлык төлөм",        price: "5 000 сом" },
