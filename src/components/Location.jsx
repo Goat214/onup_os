@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "../css/location.css";
+import centrImg from "../images/centr.jpg";
+import qadamjayImg from "../images/qadamjay.jpeg";
 
 const branches = [
   {
     id: 0,
     name: "Жеңиш",
     city: "Жеңиш (Халмион)",
-    photo: "../src/images/centr.jpg",
+    photo: centrImg,
     address: "Кадамжай району Халмион айылы",
     hint: "Медина кафенин жанында",
     hours: "09:00 – 16:00",
@@ -19,7 +21,7 @@ const branches = [
     id: 1,
     name: "Кадамжай",
     city: "Кадамжай",           // ← shahar/rayon
-    photo: "../src/images/qadamjay.jpeg",                  // ← rasm yo'lini qo'shing
+    photo: qadamjayImg,                  // ← rasm yo'lini qo'shing
     address: "Кадамжай",       // ← manzilni kiriting
     hint: "автовокзал",          // ← mo'ljalni kiriting
     hours: "09:00 – 16:00",     // ← ish vaqtini o'zgartiring
