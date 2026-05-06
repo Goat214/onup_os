@@ -19,14 +19,13 @@ const branches = [
     id: 1,
     name: "Кадамжай",
     city: "Кадамжай",           // ← shahar/rayon
-    photo: "",                  // ← rasm yo'lini qo'shing
-    address: "Дарек жок",       // ← manzilni kiriting
-    hint: "Белги жок",          // ← mo'ljalni kiriting
+    photo: "../src/images/qadamjay.jpeg",                  // ← rasm yo'lini qo'shing
+    address: "Кадамжай",       // ← manzilni kiriting
+    hint: "автовокзал",          // ← mo'ljalni kiriting
     hours: "09:00 – 16:00",     // ← ish vaqtini o'zgartiring
     phone: "+996 773 101 069",
     phoneRaw: "+996773101069",           // ← telefon (raqamlar bilan)
-    mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d500!2d71.62811!3d40.19455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDExJzQwLjQiTiA3McKwMzcnNDEuMiJF!5e0!3m2!1sru!2skg!4v1710000000000!5m2!1sru!2skg",
+    mapSrc: "https://www.google.com/maps?q=40.131306,71.721111&hl=ru&z=16&output=embed"
     // ↑ o'z koordinatlaringizni kiriting
   },
 ];
@@ -86,7 +85,7 @@ export default function LocationSection() {
               <div className="loc-divider" />
 
               <div className="loc-info-row">
-                <span className="loc-info-label">Mo'ljal</span>
+                <span className="loc-info-label">Белги</span>
                 <span className="loc-info-value">{branch.hint}</span>
               </div>
 
