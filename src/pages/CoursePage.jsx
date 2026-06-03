@@ -175,66 +175,60 @@ export default function CoursePage({ course }) {
           {/* Price cards */}
           {activePkg && (
             <div className="cp-pricing__grid">
-              {activePkg.plans.map((plan, i) => (
-                <div
-                  key={i}
-                  className={`cp-price-card ${
-                    plan.accent ? "cp-price-card--accent" : ""
-                  }`}
-                  style={plan.accent ? { borderColor: accent } : {}}
-                >
-                  {plan.badge && (
-                    <div
-                      className="cp-price-card__badge"
-                      style={{ background: accent }}
-                    >
-                      {plan.badge}
+              {activePkg.plans.map((plan, i) => {
+                // ── Faqat img bo'lsa — rasm card ──
+                if (plan.img && !plan.type && !plan.amount && (!plan.rows || plan.rows.length === 0)) {
+                  return (
+                    <div key={i} className="cp-price-card cp-price-card--img">
+                      <img src={plan.img} alt="" className="cp-price-card__img" />
                     </div>
-                  )}
-
-                  {/* Type */}
+                  );
+                }
+ 
+                // ── Oddiy card ──
+                return (
                   <div
-                    className="cp-price-card__type"
-                    style={{ color: accent }}
+                    key={i}
+                    className={`cp-price-card ${plan.accent ? "cp-price-card--accent" : ""}`}
+                    style={plan.accent ? { borderColor: accent } : {}}
                   >
-                    {plan.type}
-                  </div>
-
-                  {/* Main price */}
-                  <div className="cp-price-card__amount">{plan.amount}</div>
-
-                  {/* Rows table */}
-                  <div className="cp-price-rows">
-                    {plan.rows.map((row, j) => (
-                      <div key={j} className="cp-price-row">
-                        <span className="cp-price-row__label">{row.label}</span>
-                        <span
-                          className="cp-price-row__price"
-                          style={{ color: accent }}
-                        >
-                          {row.price}
-                        </span>
+                    {plan.badge && (
+                      <div className="cp-price-card__badge" style={{ background: accent }}>
+                        {plan.badge}
                       </div>
-                    ))}
+                    )}
+ 
+                    <div className="cp-price-card__type" style={{ color: accent }}>
+                      {plan.type}
+                    </div>
+ 
+                    <div className="cp-price-card__amount">{plan.amount}</div>
+ 
+                    <div className="cp-price-rows">
+                      {(plan.rows || []).map((row, j) => (
+                        <div key={j} className="cp-price-row">
+                          <span className="cp-price-row__label">{row.label}</span>
+                          <span className="cp-price-row__price" style={{ color: accent }}>
+                            {row.price}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+ 
+                    <a
+                      href="#"
+                      className={plan.accent ? "cp-price-card__btn" : "cp-price-card__btn--outline"}
+                      style={
+                        plan.accent
+                          ? { background: accent }
+                          : { color: accent, borderColor: accent }
+                      }
+                    >
+                      Катталуу
+                    </a>
                   </div>
-
-                  <a
-                    href="#"
-                    className={
-                      plan.accent
-                        ? "cp-price-card__btn"
-                        : "cp-price-card__btn--outline"
-                    }
-                    style={
-                      plan.accent
-                        ? { background: accent }
-                        : { color: accent, borderColor: accent }
-                    }
-                  >
-                    Катталуу
-                  </a>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

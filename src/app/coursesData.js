@@ -2,6 +2,8 @@
 //  coursesData.js  —  Бардык 6 курстун маалыматы
 // ═══════════════════════════════════════════════════════
 
+import priceImg from "../images/siteLogo.jpeg";
+
 export const liderData = {
   breadcrumb: "Лидерлик",
   emoji: "🏆",
@@ -72,6 +74,13 @@ export const liderData = {
             { price: "ОАО 'А Банк'" },
             { label: "РЕКВИЗИТ ",     price: "1350840020010908" },
           ],
+        },
+        {
+            img: priceImg,
+            amount: "",
+            accent: true,
+            badge: "БӨЛҮП ТӨЛӨӨ ",
+            rows: [],
         },
       ],
     },
@@ -193,6 +202,13 @@ export const tezOkuuData = {
             { label: "РЕКВИЗИТ ",     price: "1350840020010908" },
           ],
         },
+        {
+          img: priceImg,
+          amount: "",
+          accent: true,
+          badge: "БӨЛҮП ТӨЛӨӨ ",
+          rows: [],
+      },
       ],
     },
     {
@@ -288,6 +304,7 @@ export const jetiTepkichData = {
             { label: "1 ай үчүн жалпы",    price: "5 000 сом" },
           ],
         },
+       
         
       ],
     },
@@ -386,6 +403,13 @@ export const englishData = {
             { label: "РЕКВИЗИТ ",     price: "1350840020010908" },
           ],
         },
+        {
+          img: priceImg,
+          amount: "",
+          accent: true,
+          badge: "БӨЛҮП ТӨЛӨӨ ",
+          rows: [],
+      },
       ],
     },
     {
@@ -480,6 +504,13 @@ export const russianData = {
             { label: "РЕКВИЗИТ ",     price: "1350840020010908" },
           ],
         },
+        {
+          img: priceImg,
+          amount: "",
+          accent: true,
+          badge: "БӨЛҮП ТӨЛӨӨ ",
+          rows: [],
+      },
       ],
     },
     {
