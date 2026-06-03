@@ -9,7 +9,7 @@ import "../css/navbar.css";
 import "../css/courses.css";
 import "../css/blogSection.css";
 import Location from "../components/Location";
-
+import lider2 from "../images/lider1.webp";
 // ── Rasm importlari ──────────────────────────────────────────
 import one from "../images/nafisa3.jpg";
 import two from "../images/nafisa.jpg";
